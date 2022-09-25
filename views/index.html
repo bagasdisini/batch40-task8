@@ -97,20 +97,20 @@
         style="width: 100%; height: 200px; object-fit: cover" /></a>
       <div class  ="card-body">
         <a href="detail-project/{{$index}}"><h6 class="card-title fw-bold text-black">{{$data.ProjectName}}</h6></a>
-        <small>Durasi : 3 Bulan</small>
+        <small>Duration : {{$data.Duration}}</small>
         <p class="card-text fs-6 my-3" style="text-align: justify">
           {{$data.Description}}
         </p>
         <div class="mb-3 fs-5">
-          <i class="fa-brands fa-js me-3"></i>
-          <i class="fa-brands fa-node me-3"></i>
-          <i class="fa-brands fa-vuejs me-3"></i>
-          <i class="fa-brands fa-react"></i>
+          <i class="fa-brands fa-{{$data.TypeScript}} me-3"></i>
+          <i class="fa-brands fa-{{$data.NodeJs}} me-3"></i>
+          <i class="fa-brands fa-{{$data.VueJs}} me-3"></i>
+          <i class="fa-brands fa-{{$data.ReactJs}}"></i>
         </div>
-        <button type="button" class="btn bg-orange text-white btn-sm rounded-pill">
-          Edit
+        <button type="button" class="btn bg-orange text-white btn-sm rounded-pill"><a href="/edit-project/{{$index}}" class="text-white">
+          Edit</a>
         </button>
-        <button type="button" class="btn bg-orange btn-sm rounded-pill"><a href="/delete-blog/{{$index}}" class="text-white">
+        <button type="button" class="btn bg-orange btn-sm rounded-pill" action><a href="/delete-project/{{$index}}" class="text-white">
           Delete
         </a>
         </button>
