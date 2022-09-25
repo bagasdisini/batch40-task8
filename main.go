@@ -140,8 +140,8 @@ func addBlog(w http.ResponseWriter, r *http.Request) {
 	var layout = "2006-01-02"
 	var startDateParse, _ = time.Parse(layout, startDate)
 	var endDateParse, _ = time.Parse(layout, endDate)
-	var startDateConvert = startDateParse.Format("02 January 2006")
-	var endDateConvert = endDateParse.Format("02 January 2006")
+	var startDateConvert = startDateParse.Format("02 Jan 2006")
+	var endDateConvert = endDateParse.Format("02 Jan 2006")
 
 	var hours = endDateParse.Sub(startDateParse).Hours()
 	var days = hours / 24
@@ -240,8 +240,8 @@ func updateProject(w http.ResponseWriter, r *http.Request) {
 	var layout = "2006-01-02"
 	var startDateParse, _ = time.Parse(layout, startDate)
 	var endDateParse, _ = time.Parse(layout, endDate)
-	var startDateConvert = startDateParse.Format("02 January 2006")
-	var endDateConvert = endDateParse.Format("02 January 2006")
+	var startDateConvert = startDateParse.Format("02 Jan 2006")
+	var endDateConvert = endDateParse.Format("02 Jan 2006")
 
 	var hours = endDateParse.Sub(startDateParse).Hours()
 	var days = hours / 24
